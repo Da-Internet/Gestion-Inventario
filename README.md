@@ -93,3 +93,14 @@ Crearemos los servicios en PuntosController  (Revisar PuntosController )
 
 ## Paso 14
 Configuraremos la ruta en el servidor (Server.js) con un MiddleWare
+
+# Cosas importantes
+## IMPORTANTE
+el constante express que requiere express instalado
+
+## Enrutamientos
+El exportar modulos en los enrutamientos al final, con constante rutas que requiere express routes
+
+## Server
+La constante app que requiere express, que es basicamente el objeto
+Definir el puerto constante
