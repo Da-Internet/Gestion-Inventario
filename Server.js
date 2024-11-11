@@ -9,7 +9,6 @@ const morgan = require('morgan');
 
 //Exportaremos el modulo de Rutas
 const ventasRutas = require('./Routes/VentasRoutes.js');
-// Problemas encontrados al intentar crear mas rutas
 const comprasRutas = require('./Routes/ComprasRoutes.js');
 const inventarioRutas = require('./Routes/InventarioRoutes.js');
 const proveedorRutas = require('./Routes/ProveedorRoutes.js');
@@ -19,10 +18,9 @@ app.use(morgan('dev')); //
 app.use(bodyParser.json()); // Todas las peticiones se convertiran a Json
 
 app.use("/Ventas", ventasRutas);
-// Problemas encontrados al intentar crear mas rutas
-// app.use("/Compras", comprasRutas);
-// app.use("/Inventario", inventarioRutas);
-// app.use("/Proveedor", proveedorRutas);
+app.use("/Compras", comprasRutas);
+app.use("/Inventario", inventarioRutas);
+app.use("/Proveedor", proveedorRutas);
 
 const PORT = 3000; // Definir el puerto de default
 
