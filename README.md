@@ -60,7 +60,7 @@ Compras | ID_Compras | Fecha_Compra | Hora_Compra | Total | Metodo_Pago  | Impue
 --- | --- | --- | --- | --- | --- | ---
 Fila | int autoincremental | Varchar | Time | Decimal | Varchar | Varchar 
 
-Proveedor | ID_Proveedor | Nombre | Pais | Compañia | Metodo  
+Proveedor | ID_Proveedor | Nombre | Pais | Compañia | Productos  
 --- | --- | --- | --- | --- | --- 
 Fila | int autoincremental | Varchar |  Varchar | Varchar | Varchar 
 
