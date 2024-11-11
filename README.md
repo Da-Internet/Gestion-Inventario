@@ -50,6 +50,7 @@ Asegurarse de que en package.json el archivo "main" debe ser Server.js, o server
 
 ## Paso 8
 Ahora crearemos una base de Datos para ejemplificar con el modulo MySQL2 (Se puede hacer directo desde PHPMyAdmin)
+### Ejemplo de examen
 Nombre: Gestion_Inventario
 
 Ventas | ID_Ventas  | Fecha_Venta  | Hora_Venta  | Total_Venta  | Metodo_Pago  | Impuesto
@@ -96,11 +97,17 @@ Configuraremos la ruta en el servidor (Server.js) con un MiddleWare
 
 # Cosas importantes
 ## IMPORTANTE
-el constante express que requiere express instalado
-
-## Enrutamientos
-El exportar modulos en los enrutamientos al final, con constante rutas que requiere express routes
+el express constante  que requiere express instalado
 
 ## Server
-La constante app que requiere express, que es basicamente el objeto
-Definir el puerto constante
+La app constante que requiere express
+Definir el puerto constante 3000
+El body parser y morgan constantes que requieren los modulos respectivos
+
+## Enrutamientos
+El exportar el modulo del enrutamiento al final, con rutas constantes que requieren rutas express
+
+## Base de Datos
+La constante de mysql2 que requiere mysql2
+La conexion constante que se crea con mysql2 con el host, usuario, contraseña y el nombre de la base de datos y el puerto del xampp
+El exportar el modulo de conexion
