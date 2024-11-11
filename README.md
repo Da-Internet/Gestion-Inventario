@@ -34,7 +34,7 @@ Crearemos la estructura del Proyecto con las carpetas "Controllers", "Models", "
 Crearemos un archivo llamado Server.js
 
 ## Paso 3
-Crearemos el primer archivo de Rutas, Ej1Routes.js, y el primer archivo de Controladores, Ej1Controller.js
+Crearemos el primer archivo de Rutas, y el primer archivo de Controladores
 
 ## Paso 4
 Instalaremos ahora los modulos necesarios (Ver apartado de Instalacion de Modulos)
@@ -43,17 +43,29 @@ Instalaremos ahora los modulos necesarios (Ver apartado de Instalacion de Modulo
 Ahora configuraremos el Server.js (Revisar Server.js para configuracion)
 
 ## Paso 6
-Ahora configuraremos nodemon en package.json
+Ahora configuraremos nodemon en package.json con "dev": "nodemon run dev"  debajo de test
 
 ## Paso 7
 Asegurarse de que en package.json el archivo "main" debe ser Server.js, o server.js debe llamarse como el archivo "main"
 
 ## Paso 8
 Ahora crearemos una base de Datos para ejemplificar con el modulo MySQL2 (Se puede hacer directo desde PHPMyAdmin)
-Nombre: bd_api_rest
-Tabla_1 | ID | Fecha | Hora | Total | Metodo  
+Nombre: Gestion_Inventario
+Ventas | ID_Ventas  | Fecha_Venta  | Hora_Venta  | Total_Venta  | Metodo_Pago  | Impuesto
 --- | --- | --- | --- |--- |--- 
-Fila | int autoincremental | date | Time o Varchar | Decimal | Varchar 
+Fila | int autoincremental | date | Time | Decimal | Varchar | Varchar
+
+Compras | ID_Compras | Fecha_Compra | Hora_Compra | Total | Metodo_Pago  | Impuesto  
+--- | --- | --- | --- |--- |--- 
+Fila | int autoincremental | Varchar | Time | Decimal | Varchar | Varchar 
+
+Proveedor | ID_Proveedor | Nombre | Pais | Compañia | Metodo  
+--- | --- | --- | --- |--- |--- 
+Fila | int autoincremental | Varchar |  Varchar | Varchar | Varchar 
+
+Inventario | ID_Inventario | Nombre | Categoria | Stock | Cantidad  
+--- | --- | --- | --- |--- |--- 
+Fila | int autoincremental | Varchar |  Varchar | Boolean | Int 
 
 (Nota, el VARCHAR siempre necesita de un maximo de longitud)
 

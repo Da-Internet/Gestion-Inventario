@@ -2,10 +2,10 @@
   "name": "gestion_inventario",
   "version": "1.0.0",
   "description": "node -v",
-  "main": "index.js",
+  "main": "Server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon run dev"
+    "dev": "nodemon run dev" 
   },
   "repository": {
     "type": "git",
