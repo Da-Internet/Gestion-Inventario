@@ -9,18 +9,18 @@ const morgan = require('morgan');
 
 //Exportaremos el modulo de Rutas
 const ventasRutas = require('./Routes/VentasRoutes.js');
-const comprasRutas = require('./Routes/ComprasRoutes.js');
-const inventarioRutas = require('./Routes/InventarioRoutes.js');
-const proveedorRutas = require('./Routes/ proveedorRoutes.js');
+// const comprasRutas = require('./Routes/ComprasRoutes.js');
+// const inventarioRutas = require('./Routes/InventarioRoutes.js');
+// const proveedorRutas = require('./Routes/ProveedorRoutes.js');
 
 //MiddleWare - Conjunto de funciones que se ejecutan de manera secuencial durante el ciclo de vida de una solicitud HTTP
 app.use(morgan('dev')); // 
 app.use(bodyParser.json()); // Todas las peticiones se convertiran a Json
 
-app.use("/Ventas" , ventasRutas)
-app.use("/Compras" , comprasRutas)
-app.use("/Inventario" , inventarioRutas)
-app.use("/Proveedor" , proveedorRutas)
+app.use("/Ventas", ventasRutas);
+// app.use("/Compras", comprasRutas);
+// app.use("/Inventario", inventarioRutas);
+// app.use("/Proveedor", proveedorRutas);
 
 const PORT = 3000; // Definir el puerto de default
 

@@ -1,0 +1,13 @@
+
+// Usaremos Express para crear el servicio controlador
+// Necesitaremos las Rutas (EndPoints)
+const express = require('express');
+const rutas = express.Router(); // Creamos un objeto especifico para las rutas
+
+// Con esto conectamos las rutas al controlador especifico
+const ventasController = require('../Controllers/VentasController.js');
+
+
+
+// Exportaremos el objeto para que se use en otros archivos
+module.exports = rutas;
