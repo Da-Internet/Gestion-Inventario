@@ -9,15 +9,17 @@ const morgan = require('morgan');
 
 //Exportaremos el modulo de Rutas
 const ventasRutas = require('./Routes/VentasRoutes.js');
-// const comprasRutas = require('./Routes/ComprasRoutes.js');
-// const inventarioRutas = require('./Routes/InventarioRoutes.js');
-// const proveedorRutas = require('./Routes/ProveedorRoutes.js');
+// Problemas encontrados al intentar crear mas rutas
+const comprasRutas = require('./Routes/ComprasRoutes.js');
+const inventarioRutas = require('./Routes/InventarioRoutes.js');
+const proveedorRutas = require('./Routes/ProveedorRoutes.js');
 
 //MiddleWare - Conjunto de funciones que se ejecutan de manera secuencial durante el ciclo de vida de una solicitud HTTP
 app.use(morgan('dev')); // 
 app.use(bodyParser.json()); // Todas las peticiones se convertiran a Json
 
 app.use("/Ventas", ventasRutas);
+// Problemas encontrados al intentar crear mas rutas
 // app.use("/Compras", comprasRutas);
 // app.use("/Inventario", inventarioRutas);
 // app.use("/Proveedor", proveedorRutas);
