@@ -1,0 +1,27 @@
+{
+  "name": "gestion_inventario",
+  "version": "1.0.0",
+  "description": "node -v",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Da-Internet/Gestion-Inventario.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Da-Internet/Gestion-Inventario/issues"
+  },
+  "homepage": "https://github.com/Da-Internet/Gestion-Inventario#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.4",
+    "nodemon": "^3.1.7"
+  }
+}
