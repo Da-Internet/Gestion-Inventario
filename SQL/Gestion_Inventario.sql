@@ -25,7 +25,7 @@ CREATE TABLE `inventario` (
   `ID_Inventario` INT(13) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `Nombre` VARCHAR(250) NOT NULL,
   `Categoria` VARCHAR(250) NOT NULL,
-  `Stock` BOOLEAN(1) NOT NULL,
+  `Stock` VARCHAR(2) NOT NULL,
   `Cantidad` INT(99) NOT NULL
 );
 
