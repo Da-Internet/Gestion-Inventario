@@ -15,7 +15,6 @@ const conexion = mysql2.createConnection({
 }); // Todavia no se esta conectando aqui, solo se crea el objeto de Conexion
 
 // Ahora si nos conectaremos a la base de datos usando el objeto conexion
-
 conexion.connect(err => {
     if (err) {
         console.error("Error de Conexion" + err)
