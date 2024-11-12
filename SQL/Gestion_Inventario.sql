@@ -9,7 +9,7 @@ CREATE TABLE `ventas` (
   `Hora_Venta` TIME NOT NULL,
   `Total_Venta` INT(99) NOT NULL,
   `Metodo_Venta` VARCHAR(250) NOT NULL,
-  `Impuesto` INT(99) NOT NULL
+  `Impuesto_Venta` INT(99) NOT NULL
 );
 
 CREATE TABLE `compras` (
