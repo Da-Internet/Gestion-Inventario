@@ -111,3 +111,10 @@ El exportar el modulo del enrutamiento al final, con rutas constantes que requie
 La constante de mysql2 que requiere mysql2
 La conexion constante que se crea con mysql2 con el host, usuario, contraseña y el nombre de la base de datos y el puerto del xampp
 El exportar el modulo de conexion
+
+## Sentencias de SQL
+"INSERT INTO `Tabla`(`Campo1`, `Campo2`, `Campo3`, `Campo4`, `Campo5`) VALUES (?,?,?,?,?);"
+'SELECT * FROM `Tabla`;'
+'SELECT * FROM `Tabla` WHERE Columna=?;'
+'DELETE FROM `Tabla` WHERE id=?'
+'UPDATE `Tabla` SET Campo1=?, Campo2=?, Campo3=?, Campo4=? , Campo5=? WHERE id=?;'
