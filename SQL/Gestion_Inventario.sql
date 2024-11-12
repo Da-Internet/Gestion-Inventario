@@ -8,7 +8,7 @@ CREATE TABLE `ventas` (
   `Fecha_Venta` DATE NOT NULL,
   `Hora_Venta` TIME NOT NULL,
   `Total_Venta` INT(99) NOT NULL,
-  `Metodo_Pago` VARCHAR(250) NOT NULL,
+  `Metodo_Venta` VARCHAR(250) NOT NULL,
   `Impuesto` INT(99) NOT NULL
 );
 
@@ -17,8 +17,8 @@ CREATE TABLE `compras` (
   `Fecha_Compra` DATE NOT NULL,
   `Hora_Compra` TIME NOT NULL,
   `Total_Compra` INT(99) NOT NULL,
-  `Metodo_Pago` VARCHAR(250) NOT NULL,
-  `Impuesto` INT(250) NOT NULL
+  `Metodo_Compra` VARCHAR(250) NOT NULL,
+  `Impuesto_Compra` INT(250) NOT NULL
 ) ;
 
 CREATE TABLE `inventario` (

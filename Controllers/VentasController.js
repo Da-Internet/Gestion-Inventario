@@ -4,9 +4,8 @@
 // Conectamos a la base de datos para usarla en los controladores
 const conexion = require("../Models/Database.js")
 
-// POST: / registrarPuntos - Para Registrar una puntuacion
+// POST: / registrarVentas - Para Registrar una puntuacion
 registrarVentas = (req, res) => {
-
     // Columnas a crear al registrar nuevo elemento:  Fecha_Venta | Hora_Venta | Total_Venta | Metodo_Venta | Impuesto_Venta
     const {
         Fecha_Venta,
@@ -25,12 +24,12 @@ registrarVentas = (req, res) => {
         res.json({
             message: "Venta subida Correctamente",
             data: result
-        }) // Con esto veremos el resultado de la consulta
-    })
+        }); // Con esto veremos el resultado de la consulta
+    });
 
 }
 
-// GET: /Users/:id - Obtener Usuario segun ID
+// GET: /Ventas/:id_ventas - Obtener Usuario segun ID
 obtenerVentasPorID = (req, res) => {
     // Con esto veremos el metodo de la consulta
     const { id_ventas } = req.params
@@ -47,15 +46,15 @@ obtenerVentasPorID = (req, res) => {
     });
 }
 
-// GET: /Users/:metodo - Obtener los Usuarios de un Metodo_Pago
+// GET: /Venta/:Metodo_Venta - Obtener los Usuarios de un Metodo_Pago
 obtenerVentasPorMetodo = (req, res) => {
     // Con esto veremos el metodo de la consulta
-    const { Metodo_Pago } = req.params
+    const { Metodo_Venta } = req.params
 
     //Llamar a todos los usuarios con un metodo específico
     const query = 'SELECT * FROM `Ventas` WHERE Metodo_Venta=?;'
 
-    conexion.query(query, [Metodo_Pago], (err, results) => {
+    conexion.query(query, [Metodo_Venta], (err, results) => {
         if (err) throw err;
         res.json({
             message: "Aqui estan todas las ventas con el ID especificado",
@@ -64,7 +63,7 @@ obtenerVentasPorMetodo = (req, res) => {
     });
 }
 
-// DELETE: /Ventas/id - Borrar la puntuacion
+// DELETE: /Ventas/id_ventas - Borrar la puntuacion
 borrarVenta = (req, res) => {
     // Con esto encontramos la venta
     const { id_ventas } = req.params
@@ -79,10 +78,9 @@ borrarVenta = (req, res) => {
             data: results
         });
     });
-
 }
 
-// UPDATE: /User/id  - Actualizar la venta, se identifica con id_venta
+// UPDATE: /Ventas/id_ventas  - Actualizar la venta, se identifica con id_venta
 // Parametros a Modificar: Fecha_Venta | Hora_Venta | Total_Venta | Metodo_Venta | Impuesto_Venta
 actualizarVentas = (req, res) => {
     // Con esto encontramos la venta
@@ -108,5 +106,5 @@ module.exports = {
     obtenerVentasPorID,
     obtenerVentasPorMetodo,
     borrarVenta,
-    actualizarVentas
+    actualizarVenta
 }

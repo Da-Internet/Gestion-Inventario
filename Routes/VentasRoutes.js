@@ -11,16 +11,16 @@ const ventasController = require('../Controllers/VentasController.js');
 rutas.post('/registrarVentas', ventasController.registrarVentas)
 
 // GET: /Ventas/:id - Obtener las Ventas segun ID
-rutas.get('/:id_venta', ventasController.obtenerVentasPorID)
+rutas.get('/:id_ventas', ventasController.obtenerVentasPorID)
 
 // GET: /Ventas/:metodo_pago - Obtener las Ventas segun Metodo de pago
-rutas.get('/:metodo_pago', ventasController.obtenerVentasPorMetodo)
+rutas.get('/:metodo_venta', ventasController.obtenerVentasPorMetodo)
 
 // DELETE: /Ventas/id - Borrar la venta
-rutas.delete('/id_venta', ventasController.borrarVenta)
+rutas.delete('/id_ventas', ventasController.borrarVenta)
 
 // UPDATE: /Ventas/id  - Actualizar la venta 
-rutas.put('/id_venta', ventasController.actualizarVentas)
+rutas.put('/id_ventas', ventasController.actualizarVenta)
 
 // Exportaremos el objeto para que se use en otros archivos
 module.exports = rutas;
