@@ -29,7 +29,7 @@ CREATE TABLE `inventario` (
   `Cantidad` INT(99) NOT NULL
 );
 
-CREATE TABLE `proveedor` (
+CREATE TABLE `proveedores` (
   `ID_Proveedor` INT(13) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `Nombre` VARCHAR(250) NOT NULL,
   `Pais` VARCHAR(250) NOT NULL,

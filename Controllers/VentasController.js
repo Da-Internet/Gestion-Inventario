@@ -4,7 +4,7 @@
 // Conectamos a la base de datos para usarla en los controladores
 const conexion = require("../Models/Database.js")
 
-// POST: / registrarVentas - Para Registrar una puntuacion
+// POST: / registrarVentas - Para Registrar una Venta
 registrarVentas = (req, res) => {
     // Columnas a crear al registrar nuevo elemento:  Fecha_Venta | Hora_Venta | Total_Venta | Metodo_Venta | Impuesto_Venta
     const {
@@ -26,10 +26,9 @@ registrarVentas = (req, res) => {
             data: result
         }); // Con esto veremos el resultado de la consulta
     });
-
 }
 
-// GET: /Ventas/:id_ventas - Obtener Usuario segun ID
+// GET: /Ventas/:id_ventas - Obtener Venta segun ID
 obtenerVentasPorID = (req, res) => {
     // Con esto veremos el metodo de la consulta
     const { id_ventas } = req.params
@@ -46,7 +45,7 @@ obtenerVentasPorID = (req, res) => {
     });
 }
 
-// GET: /Venta/:Metodo_Venta - Obtener los Usuarios de un Metodo_Pago
+// GET: /Venta/:Metodo_Venta - Obtener las Ventas de un Metodo_Pago
 obtenerVentasPorMetodo = (req, res) => {
     // Con esto veremos el metodo de la consulta
     const { Metodo_Venta } = req.params
@@ -63,7 +62,7 @@ obtenerVentasPorMetodo = (req, res) => {
     });
 }
 
-// DELETE: /Ventas/id_ventas - Borrar la puntuacion
+// DELETE: /Ventas/id_ventas - Borrar la Venta
 borrarVenta = (req, res) => {
     // Con esto encontramos la venta
     const { id_ventas } = req.params
@@ -80,7 +79,7 @@ borrarVenta = (req, res) => {
     });
 }
 
-// UPDATE: /Ventas/id_ventas  - Actualizar la venta, se identifica con id_venta
+// UPDATE: /Ventas/id_ventas  - Actualizar la Venta, se identifica con id_venta
 // Parametros a Modificar: Fecha_Venta | Hora_Venta | Total_Venta | Metodo_Venta | Impuesto_Venta
 actualizarVentas = (req, res) => {
     // Con esto encontramos la venta
@@ -89,7 +88,7 @@ actualizarVentas = (req, res) => {
     const { Fecha_Venta, Hora_Venta, Total_Venta, Metodo_Venta, Impuesto_Venta } = req.body
 
     // El script de SQL
-    const query = 'UPDATE `Ventas` SET Fecha_Venta=?, Hora_Venta=?, Total_Venta=?, Metodo_Venta=? , Impuesto_Venta=? WHERE id=?;'
+    const query = 'UPDATE `Ventas` SET Fecha_Venta=?, Hora_Venta=?, Total_Venta=?, Metodo_Venta=? , Impuesto_Venta=? WHERE id_ventas=?;'
 
     conexion.query(query, [Fecha_Venta, Hora_Venta, Total_Venta, Metodo_Venta, Impuesto_Venta, id_ventas], (err, results) => {
         if (err) throw err;

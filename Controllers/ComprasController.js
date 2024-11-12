@@ -4,7 +4,7 @@
 // Conectamos a la base de datos para usarla en los controladores
 const conexion = require("../Models/Database.js")
 
-// POST: / registrarCompras - Para Registrar una puntuacion
+// POST: / registrarCompras - Para Registrar una Compra
 registrarCompras = (req, res) => {
     // Columnas a crear al registrar nuevo elemento:  Fecha_Compra | Hora_Compra | Total_Compra | Metodo_Compra | Impuesto_Compra
     const {
@@ -15,7 +15,7 @@ registrarCompras = (req, res) => {
         Impuesto_Compra
     } = req.body // Esto almacena los datos que llegan al servicio
 
-    const sql = "INSERT INTO `Ventas`(`Fecha_Venta`, `Hora_Venta`, `Total_Venta`, `Metodo_Venta`, `Impuesto_Venta`) VALUES (?,?,?,?,?);" // Cuando esto se cargue se usara el orden guardado
+    const sql = "INSERT INTO `Compras`(`Fecha_Compra`, `Hora_Compra`, `Total_Compra`, `Metodo_Compra`, `Impuesto_Compra`) VALUES (?,?,?,?,?);" // Cuando esto se cargue se usara el orden guardado
     conexion.query(sql, [Fecha_Compra, Hora_Compra, Total_Compra, Metodo_Compra, Impuesto_Compra], (err, result) => {
         if (err) {
             console.error("Error al registrar la Compra" + err)
@@ -39,7 +39,7 @@ obtenerComprasPorID = (req, res) => {
     conexion.query(query, [id_compras], (err, results) => {
         if (err) throw err;
         res.json({
-            message: "Aqui estan todas las Compras con el metodo de venta especificado",
+            message: "Aqui estan todas las Compras con el metodo de Compra especificado",
             data: results
         });
     });
@@ -64,7 +64,7 @@ obtenerComprasPorMetodo = (req, res) => {
 
 // DELETE: /Compras/id_compras - Borrar la compra
 borrarCompra = (req, res) => {
-    // Con esto encontramos la venta
+    // Con esto encontramos la Compra
     const { id_compras } = req.params
 
     // El script de SQL
@@ -82,13 +82,13 @@ borrarCompra = (req, res) => {
 // UPDATE: /Compras/id_compras  - Actualizar la compra 
 // Parametros a Modificar: Fecha_Compra | Hora_Compra | Total_Compra | Metodo_Compra | Impuesto_Compra
 actualizarCompras = (req, res) => {
-// Con esto encontramos la venta
+// Con esto encontramos la Compra
 const { id_compras } = req.params
 // Valores a modificar
 const { Fecha_Compra, Hora_Compra, Total_Compra, Metodo_Compra, Impuesto_Compra } = req.body
 
 // El script de SQL
-const query = 'UPDATE `Compras` SET Fecha_Compra=?, Hora_Compra=?, Total_Compra=?, Metodo_Compra=? , Impuesto_Compra=? WHERE id=?;'
+const query = 'UPDATE `Compras` SET Fecha_Compra=?, Hora_Compra=?, Total_Compra=?, Metodo_Compra=? , Impuesto_Compra=? WHERE id_compras=?;'
 
 conexion.query(query, [Fecha_Compra, Hora_Compra, Total_Compra, Metodo_Compra, Impuesto_Compra, id_compras], (err, results) => {
     if (err) throw err;

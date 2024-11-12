@@ -20,7 +20,7 @@ app.use(bodyParser.json()); // Todas las peticiones se convertiran a Json
 app.use("/Ventas", ventasRutas);
 app.use("/Compras", comprasRutas);
 app.use("/Inventario", inventarioRutas);
-app.use("/Proveedor", proveedorRutas);
+app.use("/Proveedores", proveedorRutas);
 
 const PORT = 3000; // Definir el puerto de default
 
