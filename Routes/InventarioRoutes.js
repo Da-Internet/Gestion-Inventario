@@ -11,13 +11,13 @@ const inventarioController = require('../Controllers/InventarioController.js');
 rutas.post('/registrarProducto', inventarioController.registrarProducto)
 
 // GET /obtenerproductos - Para obtener todos los Productos
-router.get('/obtenerproductos', inventarioController.obtenerProductos)
+rutas.get('/obtenerProductos', inventarioController.obtenerProductos)
 
 // DELETE: /Compras/id - Borrar la Compras
-rutas.delete('/id_inventario', comprasController.borrarProducto)
+rutas.delete('/id_inventario', inventarioController.borrarProducto)
 
 // UPDATE: /Compras/id  - Actualizar la Compras 
-rutas.put('/id_inventario', comprasController.actualizarProducto)
+rutas.put('/id_inventario', inventarioController.actualizarProducto)
 
 // Exportaremos el objeto para que se use en otros archivos
 module.exports = rutas;

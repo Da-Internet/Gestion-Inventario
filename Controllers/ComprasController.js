@@ -81,7 +81,7 @@ borrarCompra = (req, res) => {
 
 // UPDATE: /Compras/id_compras  - Actualizar la compra 
 // Parametros a Modificar: Fecha_Compra | Hora_Compra | Total_Compra | Metodo_Compra | Impuesto_Compra
-actualizarCompras = (req, res) => {
+actualizarCompra = (req, res) => {
 // Con esto encontramos la Compra
 const { id_compras } = req.params
 // Valores a modificar

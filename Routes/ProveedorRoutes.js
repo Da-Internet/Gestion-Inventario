@@ -11,7 +11,7 @@ const proveedorController = require('../Controllers/ProveedorController.js');
 rutas.post('/registrarProveedor', proveedorController.registrarProveedor)
 
 // GET /Proveedores - Para obtener todos los Proveedores
-router.get('/obtenerProveedores', inventarioController.obtenerProveedores)
+rutas.get('/obtenerProveedores', proveedorController.obtenerProveedores)
 
 // DELETE: /Proveedores/id - Borrar la Compras
 rutas.delete('/id_proveedor', proveedorController.borrarProveedor)

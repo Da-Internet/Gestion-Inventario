@@ -81,7 +81,7 @@ borrarVenta = (req, res) => {
 
 // UPDATE: /Ventas/id_ventas  - Actualizar la Venta, se identifica con id_venta
 // Parametros a Modificar: Fecha_Venta | Hora_Venta | Total_Venta | Metodo_Venta | Impuesto_Venta
-actualizarVentas = (req, res) => {
+actualizarVenta = (req, res) => {
     // Con esto encontramos la venta
     const { id_ventas } = req.params
     // Valores a modificar
