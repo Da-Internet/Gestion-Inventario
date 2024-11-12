@@ -13,10 +13,10 @@ rutas.post('/registrarProducto', inventarioController.registrarProducto)
 // GET /obtenerproductos - Para obtener todos los Productos
 rutas.get('/obtenerProductos', inventarioController.obtenerProductos)
 
-// DELETE: /Compras/id - Borrar la Compras
+// DELETE: /Inventario/id_inventario - Borrar el producto
 rutas.delete('/id_inventario', inventarioController.borrarProducto)
 
-// UPDATE: /Compras/id  - Actualizar la Compras 
+// UPDATE: /Inventario/id_inventario  - Actualizar el producto 
 rutas.put('/id_inventario', inventarioController.actualizarProducto)
 
 // Exportaremos el objeto para que se use en otros archivos

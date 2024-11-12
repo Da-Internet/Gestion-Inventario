@@ -13,10 +13,10 @@ rutas.post('/registrarProveedor', proveedorController.registrarProveedor)
 // GET /Proveedores - Para obtener todos los Proveedores
 rutas.get('/obtenerProveedores', proveedorController.obtenerProveedores)
 
-// DELETE: /Proveedores/id - Borrar la Compras
+// DELETE: /Proveedores/id - Borrar un Proveedor
 rutas.delete('/id_proveedor', proveedorController.borrarProveedor)
 
-// UPDATE: /Proveedores/id  - Actualizar la Compras 
+// UPDATE: /Proveedores/id  - Actualizar un Proveedor 
 rutas.put('/id_proveedor', proveedorController.actualizarProveedor)
 
 // Exportaremos el objeto para que se use en otros archivos
