@@ -107,6 +107,12 @@ El body parser y morgan constantes que requieren los modulos respectivos
 ## Enrutamientos
 El exportar el modulo del enrutamiento al final, con rutas constantes que requieren rutas express
 
+## Controladores
+La conexion constanste requiere conectarse a la base de datos
+Los modulos se pueden exportar en conjunto con {}
+Los controladores tienen requisitos y resultados
+El resultado tiene cuerpo
+
 ## Base de Datos
 La constante de mysql2 que requiere mysql2
 La conexion constante que se crea con mysql2 con el host, usuario, contraseña y el nombre de la base de datos y el puerto del xampp
