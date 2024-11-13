@@ -14,7 +14,8 @@ registrarProveedor = (req, res) => {
         Productos
     } = req.body // Esto almacena los datos que llegan al servicio
 
-    const sql = "INSERT INTO `proveedores`(`Nombre`, `Pais`, `Compañia`, `Productos`) VALUES (?,?,?,?);" // Cuando esto se cargue se usara el orden guardado
+    // Cuando esto se cargue se usara el orden guardado
+    const sql = "INSERT INTO `proveedores`(`Nombre`, `Pais`, `Compañia`, `Productos`) VALUES (?,?,?,?);" 
     conexion.query(sql, [Nombre, Pais, Compañia, Productos], (err, result) => {
         if (err) {
             console.error("Error al registrar el Proveedor" + err)

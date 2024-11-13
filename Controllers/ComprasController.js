@@ -15,7 +15,8 @@ registrarCompras = (req, res) => {
         Impuesto_Compra
     } = req.body // Esto almacena los datos que llegan al servicio
 
-    const sql = "INSERT INTO `Compras`(`Fecha_Compra`, `Hora_Compra`, `Total_Compra`, `Metodo_Compra`, `Impuesto_Compra`) VALUES (?,?,?,?,?);" // Cuando esto se cargue se usara el orden guardado
+    // Cuando esto se cargue se usara el orden guardado
+    const sql = "INSERT INTO `Compras`(`Fecha_Compra`, `Hora_Compra`, `Total_Compra`, `Metodo_Compra`, `Impuesto_Compra`) VALUES (?,?,?,?,?);" 
     conexion.query(sql, [Fecha_Compra, Hora_Compra, Total_Compra, Metodo_Compra, Impuesto_Compra], (err, result) => {
         if (err) {
             console.error("Error al registrar la Compra" + err)

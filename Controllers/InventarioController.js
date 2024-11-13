@@ -14,7 +14,8 @@ registrarProducto = (req, res) => {
         Cantidad
     } = req.body // Esto almacena los datos que llegan al servicio
 
-    const sql = "INSERT INTO `Inventario`(`Nombre`, `Categoria`, `Stock`, `Cantidad`) VALUES (?,?,?,?);" // Cuando esto se cargue se usara el orden guardado
+    // Cuando esto se cargue se usara el orden guardado
+    const sql = "INSERT INTO `Inventario`(`Nombre`, `Categoria`, `Stock`, `Cantidad`) VALUES (?,?,?,?);" 
     conexion.query(sql, [Nombre, Categoria, Stock, Cantidad], (err, result) => {
         if (err) {
             console.error("Error al registrar el Producto" + err)
