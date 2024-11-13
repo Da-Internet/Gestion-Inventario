@@ -67,7 +67,7 @@ Fila | int autoincremental | Varchar |  Varchar | Varchar | Varchar
 
 Inventario | ID_Inventario | Nombre | Categoria | Stock | Cantidad  
 --- | --- | --- | --- | --- | --- 
-Fila | int autoincremental | Varchar |  Varchar | Boolean | Int 
+Fila | int autoincremental | Varchar |  Varchar | Varchar | Int 
 
 (Nota, el VARCHAR siempre necesita de un maximo de longitud)
 
